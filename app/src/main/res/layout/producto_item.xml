@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="@dimen/activity_vertical_margin"
+    app:cardElevation="7dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/condicionProducto"
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/condicionProducto" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@android:dimen/thumbnail_height"
+            app:srcCompat="@drawable/spinner"
+            android:id="@+id/imagenProducto"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <TextView
+            style="@style/texto_normal"
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombreProducto"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/contenedorDescuento">
+
+            <TextView
+                style="@style/precioProducto"
+                android:text="$xxx.xx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPrecioDescuento"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                />
+
+            <TextView
+                android:text="$xxx.xx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPrecioDescuentoTachado"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                />
+
+            <TextView
+                android:text="xx%"
+                style="@style/descuento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDescuento"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/precioProducto"
+            android:text="$xxx.xx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/precioProducto"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

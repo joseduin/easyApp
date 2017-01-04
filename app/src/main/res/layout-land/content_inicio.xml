@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_inicio"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="mundo.hola.jose.miprimerholamundo.Inicio"
+    tools:showIn="@layout/app_bar_inicio">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/gridInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/productos"
+                android:id="@+id/productoInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/como_comprar"
+                android:id="@+id/comoComprarInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/carrito_inicio"
+                android:id="@+id/carritoInicio"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@color/colorTransparente"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/mis_pedidos_inicio"
+                android:id="@+id/misPedidosInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/direcciones_inicio"
+                android:id="@+id/direccionesInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/perfil_inicio"
+                android:id="@+id/perfilInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/contacto"
+                android:id="@+id/contactoInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/cerrar_sesion"
+                android:id="@+id/cerrarSesionInicio"
+                android:scaleType="fitCenter"
+                android:background="@color/colorTransparente"
+                android:adjustViewBounds="true"/>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>

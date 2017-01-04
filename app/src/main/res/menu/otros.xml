@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/inicioOtros"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/carritoOtro"
+        android:icon="@drawable/ic_carrito_blanco"
+        app:showAsAction="always"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/btnBuscarOtros"
+        android:orderInCategory="100"
+        android:title="Buscar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_lupa" />
+</menu>

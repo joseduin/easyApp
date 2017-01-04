@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_busqueda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparente"
+    tools:context="mundo.hola.jose.miprimerholamundo.Busqueda">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/contenedorFiltros"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            style="@style/texto_normal"
+            android:text="Ordenar por precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:id="@+id/textView4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+            <Button
+                android:text="Relevante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_ordenar_ninguno"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Mayor Precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_ordenar_mayor"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Menor Precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_ordenar_menor"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <mundo.hola.jose.miprimerholamundo.Adaptador.InteractiveScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/contenedorBusqueda"
+            android:background="@color/colorAbajo1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlanco"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    style="@style/Subtitulo"
+                    android:text="Hay x productos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textExistenciaSearch" />
+
+                <Button
+                    style="@style/añadirCarrito"
+                    android:text="Filtro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_filtro" />
+
+            </LinearLayout>
+
+            <GridLayout android:id="@+id/recycleProductosSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:animateLayoutChanges="true"/>
+
+            <ProgressBar android:id="@+id/loadingProductsSearch"
+                style="?android:progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorAbajo1"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </mundo.hola.jose.miprimerholamundo.Adaptador.InteractiveScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/contenedorBadSearch"
+        android:background="@color/colorBlanco"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/sad_search"
+            android:id="@+id/imageView3"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            style="@style/texto_normal"
+            android:text="☑ Cambia los terminos de busqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

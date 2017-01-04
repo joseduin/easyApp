@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_categoria_xml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mundo.hola.jose.miprimerholamundo.CategoriaXML">
+
+    <TextView
+        android:id="@+id/txtNombreCategoriaPadre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <mundo.hola.jose.miprimerholamundo.Adaptador.InteractiveScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/imageCategoriaPadre">
+
+
+                <LinearLayout
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlanco"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:id="@+id/txtnombreCategoriaPadre"
+                        android:text="Subject"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/flechita_der"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_felcha_der"
+                    android:background="@color/colorTransparente"
+                    android:layout_gravity="end"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageButton
+                    android:id="@+id/flechita_izq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_felcha_izq"
+                    android:background="@color/colorTransparente"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    style="@style/Subtitulo"
+                    android:text="Subcategoria"
+                    android:layout_marginLeft="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textsubcategoria"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/flechita_izq"
+                    android:layout_toEndOf="@+id/flechita_izq"
+                    android:layout_marginStart="18dp" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/contenedorCategorias">
+
+            <LinearLayout android:id="@+id/recycleCategorias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="?android:dividerHorizontal"
+                    android:animateLayoutChanges="true" />
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAbajo1"
+                android:orientation="vertical">
+
+            <TextView
+                style="@style/Subtitulo"
+                android:text="Hay x productos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:id="@+id/textExistencia" />
+
+                <GridLayout android:id="@+id/recycleProductos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    android:animateLayoutChanges="true"></GridLayout>
+
+
+            </LinearLayout>
+
+            <ProgressBar android:id="@+id/loadingProducts"
+                style="?android:progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorAbajo1"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </mundo.hola.jose.miprimerholamundo.Adaptador.InteractiveScrollView>
+
+</RelativeLayout>

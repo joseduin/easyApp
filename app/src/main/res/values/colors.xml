@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FC5F10</color>
+    <color name="colorPrimaryDark">#e34d02</color>
+    <color name="colorPrimaryClaro">#f77e40</color>
+    <color name="colorAccent">#e34d02</color>
+    <color name="colorLineaDividir">#FFCFCECE</color>
+
+    <color name="colorAbajo1">#a4efefef</color>
+    <color name="colorBlanco">#FFFFFEFE</color>
+    <color name="colorTransparente">#00fffefe</color>
+    <color name="colorNegro">#000000</color>
+    <color name="colorRojo">#e70707</color>
+
+
+</resources>

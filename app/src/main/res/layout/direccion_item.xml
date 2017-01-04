@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            style="@style/Subtitulo"
+            android:text="Direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/aliasDirItem"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorLineaDividir"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/nombreDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/apellidoDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Ruc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/rucDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Empresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/empresaDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Direccion 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/dir1DirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Direccion 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/dir2DirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Ciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ciudadDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Pais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/paisDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tlfDirItem"/>
+
+        <TextView
+            style="@style/texto_normal_p"
+            android:text="Telefono Movil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/tlfmovilDirItem"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                style="@style/añadirCarrito"
+                android:text="Actualizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnGuardarDireccionItem"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+            <Button
+                style="@style/añadirCarrito"
+                android:text="Eliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnElimininarDireccionItem"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_vertical_margin" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pago"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context="mundo.hola.jose.miprimerholamundo.Pago">
+
+    <LinearLayout
+        android:id="@+id/contenedorPagoContrareembolso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                style="@style/titulo"
+                android:text="Su pedido en EasyMarket ha sido registrado. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:text="Ha elegido el pago contra reembolso "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:text="Le enviaremos su pedido en breve plazo. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/añadirCarrito"
+                android:id="@+id/btnHistorialPedido1"
+                android:text="Ver historial de pedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contenedorPagoTransferencia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                style="@style/titulo"
+                android:text="Su pedido en EasyMarket ha sido registrado. "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:text="Por favor, háganos una transferencia por"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:id="@+id/importePago"
+                android:text="- Importe $"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:id="@+id/propietaroPago"
+                android:text="- Propietario de la cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:id="@+id/datosPago"
+                android:text="- Con los siguientes datos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:id="@+id/bancoPago"
+                android:text="- Banco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal_p"
+                android:id="@+id/referenciaPago"
+                android:text="- No se olvde de indicar su número de pedido XXXX en el concepto de su tranferencia bancaria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                style="@style/texto_normal"
+                android:text=" Su pedido será enviado apróximadamente, en cuanto recibamos su pago."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/añadirCarrito"
+                android:id="@+id/btnHistorialPedido2"
+                android:text="Ver historial de pedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

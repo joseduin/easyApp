@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ordenes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    tools:context="mundo.hola.jose.miprimerholamundo.Ordenes">
+
+    <TextView
+        style="@style/titulo"
+        android:text="Historial de Pedidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/aliasDirItem"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorLineaDividir"/>
+
+    <TextView
+        android:id="@+id/ecistenciaOrdenes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/contenedorOrdenes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="?android:dividerHorizontal"
+                android:animateLayoutChanges="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
