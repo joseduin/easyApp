@@ -24,9 +24,9 @@ import mundo.hola.jose.miprimerholamundo.modelo.SessionManager;
 
 public class Direccion extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    Button btnGuardarDireccion;
-    TextView txtDatosD1, txtDatosD2, txtDatosDRuc, txtDatosD3, txtDatosD5, txtDatosD6, txtDatosD7, txtDatosD8, txtDatosD9, txtDatosD10, txtDatosD11, txtDatosD12, txtDatosD13;
-    EditText txtNombreDir, txtRucDir, txtApellidoDir, txtEmpresaDir, txtDireccionDir, txtDireccionDir2, txtCiudadDir, txtPaisDir, txtTlfDir, txtTlfMovilDir, txtEstadoDir, txtInfoAdicionalDir, txtAliasDir;
+    private Button btnGuardarDireccion;
+    private TextView txtDatosD1, txtDatosD2, txtDatosDRuc, txtDatosD3, txtDatosD5, txtDatosD6, txtDatosD7, txtDatosD8, txtDatosD9, txtDatosD10, txtDatosD11, txtDatosD12, txtDatosD13;
+    private EditText txtNombreDir, txtRucDir, txtApellidoDir, txtEmpresaDir, txtDireccionDir, txtDireccionDir2, txtCiudadDir, txtPaisDir, txtTlfDir, txtTlfMovilDir, txtEstadoDir, txtInfoAdicionalDir, txtAliasDir;
 
     private Conversor conversor = new Conversor();
     private AsyncHttpClient client = new AsyncHttpClient();

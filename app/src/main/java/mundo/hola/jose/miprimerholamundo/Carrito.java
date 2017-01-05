@@ -52,8 +52,6 @@ import mundo.hola.jose.miprimerholamundo.modelo.Direccion;
 
 public class Carrito extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-    // Terminos y condiciones fijo?
-
     private TextView existeCarrito, txtSubTotaProducto, txtPrecioEnvio, txtTOTAL, txtTituloCarrito, txtResumenSub, txtResumenCond1, txtResumenCond2, txtResumenCond3, txtResumenCond4;
     private ViewGroup recycleCarrito, contenedorEnvioItem, contenedorPagoItem;
     private LinearLayout contenedorCarrito, contenedorDirecconesCarrito, contenedorEnvio, contenedorTotalPrecios, contenedorPago, contenedorResumen;
@@ -784,7 +782,7 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
 
     private void check(Carriers envio, int hijo) {
         EnvioActivo = hijo;
-        conversor.mensajeCorto(EnvioActivo + "");
+        Log.d("Envio", EnvioActivo + "");
         checkEnvios(hijo);
 
         txtPrecioEnvio.setText("$" + String.format("%.2f", calcularPrecioEnvio(envio)));
@@ -997,11 +995,11 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
         parametros.add("total_products", String.valueOf(subtotal()));
         parametros.add("total_products_wt", txtSubTotaProducto.getText().toString().replace("$", ""));
         parametros.add("conversion_rate", "1.000000");
-        conversor.mensajeCorto(envio_id.get(EnvioActivo));
+        Log.d("Envio id", envio_id.get(EnvioActivo));
         final int DEFAULT_TIMEOUT = 20 * 1000;
         client.setTimeout(DEFAULT_TIMEOUT);
 
-        conversor.mensajeLargo(conversor.WEB_API_AUX + "CCartOrder.php?" + parametros.toString());
+        Log.d("POST CCartOrder", conversor.WEB_API_AUX + "CCartOrder.php?" + parametros.toString());
         client.post(conversor.WEB_API_AUX + "CCartOrder.php?", parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
@@ -1058,9 +1056,11 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
 
+        Log.d("URL", conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_ADDRESS");
         client.get(conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_ADDRESS", parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 buscarValorConfBankAddress(conversor.configurations(res), order);
             }
 
@@ -1075,9 +1075,11 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
 
+        Log.d("URL", conversor.WEB_PAGE + "/configurations/" + id);
         client.get(conversor.WEB_PAGE + "/configurations/" + id, parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 buscarConfProp(conversor.configuration(res), order);
             }
 
@@ -1091,10 +1093,12 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
     private void buscarConfProp(final String banco, final Order order) {
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
+        Log.d("URL", conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_OWNER");
 
         client.get(conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_OWNER", parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 buscarValorConfProp(conversor.configurations(res), banco, order);
             }
 
@@ -1108,10 +1112,11 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
     private void buscarValorConfProp(String id, final String banco, final Order order) {
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
-
+        Log.d("URL", conversor.WEB_PAGE + "/configurations/" + id);
         client.get(conversor.WEB_PAGE + "/configurations/" + id, parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 buscarConfDatos(conversor.configuration(res), banco, order);
             }
 
@@ -1125,10 +1130,12 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
     private void buscarConfDatos(final String propietario, final String banco, final Order order) {
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
+        Log.d("URL", conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_DETAILS");
 
         client.get(conversor.WEB_PAGE + "/configurations?filter[name]=BANK_WIRE_DETAILS", parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 buscarValorConfDatos(conversor.configurations(res), propietario, banco, order);
             }
 
@@ -1142,10 +1149,11 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
     private void buscarValorConfDatos(String id, final String propietario, final String banco, final Order order) {
         RequestParams parametros = new RequestParams();
         conversor.parametrosBasicos(parametros);
-
+        Log.d("URL", conversor.WEB_PAGE + "/configurations/" + id);
         client.get(conversor.WEB_PAGE + "/configurations/" + id, parametros, new TextHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, String res) {
+                Log.d("Value", res);
                 irPago(txtTOTAL.getText().toString(), propietario, conversor.configuration(res), banco, order.getReference());
             }
 
@@ -1167,7 +1175,7 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
         i.putExtra("datos", datos);
         i.putExtra("banco", banco);
         i.putExtra("referencia", referencia);
-
+Log.d("Pago", PAYMENT + importe + propietario + datos + banco + referencia);
         startActivity(i);
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
         finish();

@@ -52,8 +52,6 @@ import mundo.hola.jose.miprimerholamundo.modelo.*;
 
 public class ProductoDetalle extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener, ViewSwitcher.ViewFactory {
 
-    // ir a caja, no encuentra el carrito
-
     private TextView textProdDetalleId, textNombre, textReferencia, textCondicioon, textDescripcion, textPrecio, textProdDisponibles, txtDescuentoDetalle, txtPrecioTachadoDescuento;
     private Button buttonCarritoProdDetalle, buttonMasCantidad, ButtonMenosCantidad;
     private NumberPicker numberPicker;
