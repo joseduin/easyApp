@@ -923,8 +923,8 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
             DisplayMetrics displayMetrics = new DisplayMetrics();
             getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-            int width = (int) (displayMetrics.widthPixels * 0.45);
-            int heigth = (int) (displayMetrics.widthPixels * 0.5);
+            int width = (int) (displayMetrics.widthPixels * 0.4);
+            int heigth = (int) (displayMetrics.widthPixels * 0.48);
 
             imagenBoton.getLayoutParams().width = width;
             imagenBoton.getLayoutParams().height = heigth;

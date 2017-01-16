@@ -146,9 +146,17 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener, N
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
+        try {
+            // Problema misterioso en el condicional e.e
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            } else {
+                super.onBackPressed();
+            }
+        } catch (NullPointerException e) {
+            // Exception dispatching finished signal.
+            // Exception in MessageQueue callback: handleReceiveCallback
+        } finally {
             super.onBackPressed();
         }
     }
