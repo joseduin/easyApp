@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     android:id="@+id/toolbar_search">
 
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="?android:attr/homeAsUpIndicator"
+        app:srcCompat="@drawable/ic_back"
         android:id="@+id/btnatras"
         android:layout_gravity="center"
         android:layout_marginRight="5dp"
@@ -24,6 +23,5 @@
         android:ems="10"
         android:id="@+id/txtBusqueda"
         android:layout_weight="1"/>
-
 
 </LinearLayout>

@@ -48,7 +48,7 @@ public class Pago extends AppCompatActivity implements NavigationView.OnNavigati
                 propietaroPago.setText("- Propietario de la cuenta " + extras.getString("propietario"));
                 datosPago.setText("- Con los siguientes datos " + extras.getString("datos"));
                 bancoPago.setText("- Banco " + extras.getString("banco"));
-                referenciaPago.setText("- No se olvde de indicar su número de pedido " + extras.getString("referencia") + "  en el concepto de su tranferencia bancaria");
+                referenciaPago.setText("- No se olvide de indicar su número de pedido " + extras.getString("referencia") + "  en el concepto de su tranferencia bancaria");
             }
         }
 

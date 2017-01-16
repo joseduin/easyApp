@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.GridLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
@@ -52,8 +53,8 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
 
     private ViewGroup recyclerCategoria;
     private GridLayout recyclerProducto;
-    private TextView textsubcategoria, textExistencia, txtnombreCategoriaPadre;
-    private LinearLayout imageCategoriaPadre;
+    private TextView textsubcategoria, textExistencia, txtSinProductos, txtnombreCategoriaPadre;
+    private LinearLayout imageCategoriaPadre, contenedorProductoCategoria;
     private InteractiveScrollView scrollView;
     private ProgressBar loadingProducts;
     private ImageButton flechita_der, flechita_izq;
@@ -78,6 +79,7 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
     private static int imageHeight;
     private static int pantallaWidth;
     private static int widthProductos;
+    private String padre_titulo = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +108,8 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
         flechita_der = (ImageButton) findViewById(R.id.flechita_der);
         flechita_izq = (ImageButton) findViewById(R.id.flechita_izq);
         contenedorCategorias = (HorizontalScrollView) findViewById(R.id.contenedorCategorias);
+        contenedorProductoCategoria = (LinearLayout) findViewById(R.id.contenedorProductoCategoria);
+        txtSinProductos = (TextView) findViewById(R.id.txtSinProductos);
 
         // Conf
         textExistencia.setVisibility(View.INVISIBLE);
@@ -134,6 +138,7 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
             titulo = extras.getInt("titulo");
             categoriaPadre = (Categoria) extras.getSerializable("categoria");
 
+            padre_titulo = categoriaPadre.getName();
             getSupportActionBar().setTitle(extras.getString("padre") + categoriaPadre.getName());
             txtnombreCategoriaPadre.setText(categoriaPadre.getName());
         }
@@ -158,6 +163,9 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
             recyclerProducto.removeAllViews();
             contarProductosImpresos = 1;
             buscarProductos();
+        } else {
+            contenedorProductoCategoria.setVisibility(View.GONE);
+            txtSinProductos.setVisibility(View.VISIBLE);
         }
 
         flechita_der.setOnClickListener(this);
@@ -293,7 +301,7 @@ public class CategoriaXML extends AppCompatActivity implements NavigationView.On
         Intent intent = new Intent(this.getApplicationContext(), CategoriaXML.class);
         intent.putExtra("categoria", categoria);
         intent.putExtra("titulo", 1);
-        intent.putExtra("padre", txtnombreCategoriaPadre.getText().toString().trim() + " - ");
+        intent.putExtra("padre", padre_titulo + " - ");
 
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);

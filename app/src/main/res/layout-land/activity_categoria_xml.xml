@@ -43,12 +43,9 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/AudioFileInfoOverlayText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlanco"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:singleLine="true"
                         android:id="@+id/txtnombreCategoriaPadre"
                         android:text="Subject"/>
 
@@ -113,6 +110,7 @@
             </HorizontalScrollView>
 
             <LinearLayout
+                android:id="@+id/contenedorProductoCategoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorAbajo1"
@@ -136,6 +134,18 @@
 
 
             </LinearLayout>
+
+            <TextView
+                style="@style/Subtitulo"
+                android:text="No tenemos productos en esta categoría."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:id="@+id/txtSinProductos"
+                android:visibility="gone"/>
+
 
             <ProgressBar android:id="@+id/loadingProducts"
                 style="?android:progressBarStyleLarge"

@@ -52,6 +52,8 @@ import mundo.hola.jose.miprimerholamundo.modelo.Direccion;
 
 public class Carrito extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    // confirmarEliminarProductoCarrito
+
     private TextView existeCarrito, txtSubTotaProducto, txtPrecioEnvio, txtTOTAL, txtTituloCarrito, txtResumenSub, txtResumenCond1, txtResumenCond2, txtResumenCond3, txtResumenCond4;
     private ViewGroup recycleCarrito, contenedorEnvioItem, contenedorPagoItem;
     private LinearLayout contenedorCarrito, contenedorDirecconesCarrito, contenedorEnvio, contenedorTotalPrecios, contenedorPago, contenedorResumen;
@@ -921,7 +923,7 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
             DisplayMetrics displayMetrics = new DisplayMetrics();
             getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-            int width = (int) (displayMetrics.widthPixels * 0.4);
+            int width = (int) (displayMetrics.widthPixels * 0.45);
             int heigth = (int) (displayMetrics.widthPixels * 0.5);
 
             imagenBoton.getLayoutParams().width = width;
@@ -957,7 +959,7 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
     private void mostrarResumen(String tipoPago, int tipo) {
         txtResumenSub.setText("Ha elegido " + tipoPago.toLowerCase() +". Aquí tiene un resumen de su pedido:");
         txtResumenCond1.setText("* El importe total de su pedido es $" + String.format("%.2f", Double.valueOf((txtTOTAL.getText().toString().replace("$", "")).replace(",", ".")))   + " (impuestos inc.)");
-        txtResumenCond2.setText("* Aceptamos las siguientes monedas para las transferencias bancarias: Dollar.");
+        txtResumenCond2.setText("* Aceptamos las siguientes monedas para las transferencias bancarias: Dolar.");
 
         switch (tipo) {
             case 0:
@@ -973,7 +975,7 @@ public class Carrito extends AppCompatActivity implements NavigationView.OnNavig
                 txtResumenCond3.setVisibility(View.GONE);
                 break;
         }
-        txtResumenCond4.setText("* Por favor, confirme su pedido haciendo clic en \"confirmo mi pedido\".");
+        txtResumenCond4.setText("* Por favor, confirme su pedido haciendo clic en \"Confirmar Pedido\".");
     }
 
 

@@ -372,7 +372,7 @@
 
                 <TextView
                     style="@style/texto_normal"
-                    android:text="Estado"
+                    android:text="Provincia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -386,7 +386,7 @@
                     android:ems="10"
                     android:id="@+id/txtEstadoDir"
                     android:layout_weight="1"
-                    android:hint="Estado"
+                    android:hint="Provincia"
                     android:enabled="false"/>
 
             </LinearLayout>

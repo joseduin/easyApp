@@ -92,7 +92,7 @@
                         android:id="@+id/txtDatosP2OR"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -117,8 +117,7 @@
                         android:id="@+id/txtDatosP3OR"/>
 
                     <EditText
-                        android:textSize="13dp"
-                        style="@style/texto_normal"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -143,8 +142,7 @@
                         android:id="@+id/txtRUCLabel"/>
 
                     <EditText
-                        android:textSize="13dp"
-                        style="@style/texto_normal"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -154,7 +152,6 @@
                         android:hint="Ruc"
                         android:maxLength="16"/>
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -171,7 +168,7 @@
                         android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="date"
@@ -206,7 +203,7 @@
                         android:id="@+id/txtDatosP4OR"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
@@ -233,7 +230,7 @@
                         android:id="@+id/txtDatosP26OR"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
@@ -305,7 +302,7 @@
                         android:id="@+id/txtDatosD5R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -331,7 +328,7 @@
                         android:id="@+id/txtDatosD6R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -357,7 +354,7 @@
                         android:id="@+id/txtDatosD7R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -383,7 +380,7 @@
                         android:id="@+id/txtDatosD8R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -402,21 +399,21 @@
 
                     <TextView
                         style="@style/texto_normal"
-                        android:text="Estado"
+                        android:text="Provincia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:id="@+id/txtDatosD11R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
                         android:ems="10"
                         android:id="@+id/txtEstadoDirR"
                         android:layout_weight="1"
-                        android:hint="Estado"
+                        android:hint="Provincia"
                         android:enabled="false"/>
 
                 </LinearLayout>
@@ -436,7 +433,7 @@
                         android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
@@ -467,7 +464,7 @@
                         android:id="@+id/txtDatosD9R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
@@ -493,7 +490,7 @@
                         android:id="@+id/txtDatosD10R"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
@@ -521,7 +518,7 @@
                         android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
                     <EditText
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_edit_letters_size_small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
